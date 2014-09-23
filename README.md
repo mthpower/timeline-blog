@@ -14,5 +14,8 @@ Then install Postgres:
 
 `sudo apt-get install postgresql postgresql-contrib`
 
+And follow the Ubuntu guide to configuring a PG server at:
+https://help.ubuntu.com/14.04/serverguide/postgresql.html
+
 Create a virtualenv, then:
 'pip install -r requirements.txt'
