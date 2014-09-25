@@ -10,6 +10,10 @@ class Article(models.Model):
     publication_date = models.DateField(null=True)
     title = models.CharField(max_length=512)
     tag = models.ManyToManyField('blog.Tag', blank=True, null=True)
+    content = models.TextField(blank=False, default='')
+
+    def __unicode__(self):  # pragma: no cover
+        return '{} - {}'.format(self.title, self.author)
 
 
 class Tag(models.Model):
