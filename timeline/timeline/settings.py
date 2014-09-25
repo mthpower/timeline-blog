@@ -58,15 +58,15 @@ WSGI_APPLICATION = 'timeline.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'timeline-db',
-            'USER': 'postgres',
-            'PASSWORD': 'zawnza',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'timeline-db',
+        'USER': 'postgres',
+        'PASSWORD': 'zawnza',
+        'HOST': 'localhost',
+        'PORT': '',
     }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
