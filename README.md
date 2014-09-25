@@ -8,7 +8,7 @@ A simple Django backed timeline blog.
 
 For a local Postgres, first install the dependencies:
 
-sudo apt-get install libpq-dev python-dev
+`sudo apt-get install libpq-dev python-dev`
 
 Then install Postgres:
 
