@@ -13,6 +13,7 @@
     <link href="{% static 'css/foundation.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
+    <script src="{% static 'js/lib/modernizr.js' %}"></script>
   </head>
   <body style="background-image: url('{% static 'img/background.png' %}');background-attachment: fixed;width:4000px">
     {% block timeline %}{% endblock timeline %}
@@ -20,8 +21,8 @@
 
     <!-- JavaScript -->
     <!-- <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.js' %}"></script> -->
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="{% static 'js/lib/jquery.min.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
     <script>
       $(document).foundation();
     </script>
