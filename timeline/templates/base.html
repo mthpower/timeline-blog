@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hogarth Graduate Scheme Timeline</title>
     {% load staticfiles %}
@@ -11,12 +10,20 @@
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" > -->
-    <link href="{% static 'foundation-5.4.5/css/foundation.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/foundation.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
-    <!-- JavaScript -->
-    <!-- <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.js' %}"></script> -->
+
   </head>
   <body style="background-image: url('{% static 'img/background.png' %}');background-attachment: fixed;width:4000px">
     {% block timeline %}{% endblock timeline %}
+
+
+    <!-- JavaScript -->
+    <!-- <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.js' %}"></script> -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
