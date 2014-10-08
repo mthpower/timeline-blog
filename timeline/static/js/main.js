@@ -3,9 +3,9 @@ require.config({
 
     paths : {
 
-        'underscore'    : '/static/js/underscore',
-        'backbone'      : '/static/js/backbone',
-        'jquery'        : '/static/js/jquery',
+        'underscore'    : '/static/js/underscore.min',
+        'backbone'      : '/static/js/backbone.min',
+        'jquery'        : '/static/js/jquery.min',
     },
 
     shim : {

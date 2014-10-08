@@ -6,18 +6,17 @@
     <title>Hogarth Graduate Scheme Timeline</title>
     {% load staticfiles %}
 
+    <!-- JavaScript -->
+    <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.min.js' %}"></script>
+
     <!--     <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> TODO -->
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" > -->
 
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
-
   </head>
   <body>
     {% block timeline %}{% endblock timeline %}
-
-    <!-- JavaScript -->
-    <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.min.js' %}"></script>
   </body>
 </html>
