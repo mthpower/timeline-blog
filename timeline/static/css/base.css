@@ -1,11 +1,30 @@
+html {
+    font-size: 16px;
+}
 
-body, html {
+body {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
     overflow-x: auto;
     overflow-y: hidden;
 }
 
+#main {
+    min-height: 48em;
+    height: 100%;
+}
+
 .timeline {
-    position:absolute;
+    position: absolute;
     width:100%;
     height:96%;
     top:2%;
@@ -14,12 +33,12 @@ body, html {
 }
 
 .bar {
-    height:5px;
-    background:#000;
-    width:100%;
-    position:absolute;
-    z-index:-998;
-    top:40%;
+    height: 2px;
+    background: #000;
+    width: 100%;
+    position: absolute;
+    z-index: -998;
+    top: 40%;
 }
 
 
@@ -31,29 +50,31 @@ body, html {
     left: 5%;
     top: 5%;
     text-align: center;
+    min-width: 950px;
+    min-height: 600px;
 }
 
-.content-simple {
+.content.simple {
     background:#E6EBE6;
     color:#fff;
     padding:10px;
     font-size:10px;
     position:absolute;
-    border:5px solid #000;
+    border:2px solid #000;
     left: 40%;
-    top: 39%;
+    top: 38%;
     z-index: 997;
     max-height: 50%;
 }
 
-.content-simple img {
+.content.simple img {
     display:block;
     max-width:45%;
     height:auto;
     margin-bottom:10px;
 }
 
-.content-simple h1 {
+.content.simple h1 {
     color:#fff;
     font-size:18px;
     font-family:Georgia, serif;
@@ -61,7 +82,7 @@ body, html {
     margin-bottom:10px;
 }
 
-.content-simple h2 {
+.content.simple h2 {
     letter-spacing:.2em;
     margin-bottom:10px;
     font-size:14px;

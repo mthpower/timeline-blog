@@ -9,11 +9,17 @@
     <!--     <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> TODO -->
 
     <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" > -->
+
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
   </head>
-  <body style="background-image: url('{% static 'img/background.png' %}');background-attachment: fixed;width:4000px">
-    {% block timeline %}{% endblock timeline %}
-
+  <body>
+    <div id="main">
+      <div class="bar"></div>
+      <div class="timeline">
+        {% block timeline %}{% endblock timeline %}
+      </div>
+    </div>
   </body>
 </html>
