@@ -3,8 +3,14 @@ define(function (require) {
 
     var _           = require('underscore'),
         Backbone    = require('backbone'),
-        app = {};
+        mousewheel	= require('mousewheel');
 
+    $(document).ready(function() {
+        $('html, body, *').mousewheel(function(e, delta) {
+            this.scrollLeft -= (delta * 40);
+            e.preventDefault();
+        });
+    });
 
-
+    return {}
 });
