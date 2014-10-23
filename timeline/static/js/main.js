@@ -6,6 +6,7 @@ require.config({
         'underscore'    : '/static/js/underscore.min',
         'backbone'      : '/static/js/backbone.min',
         'jquery'        : '/static/js/jquery.min',
+        'mousewheel'    : '/static/js/jquery.mousewheel.min'
     },
 
     shim : {
