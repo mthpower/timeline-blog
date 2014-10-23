@@ -9,14 +9,12 @@
     <!--     <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> TODO -->
 
     <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" > -->
+
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
   </head>
-  <body style="background-image: url('{% static 'img/background.png' %}');background-attachment: fixed;width:4000px">
+  <body>
     {% block timeline %}{% endblock timeline %}
-
-
-    <!-- JavaScript -->
-    <!-- <script data-main="{% static 'js/main.js' %}" src="{% static 'js/require.js' %}"></script> -->
   </body>
 </html>
