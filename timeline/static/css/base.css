@@ -12,28 +12,41 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 #timeline {
-    width: 3900px;
-    height: 60%;
+    width: 8000px;
+    height: 80%;
     position: absolute;
-    top: 20%;
+    top: 10%;
+    min-height: 40em;
 }
 
 .entry {
-    display: block;
-    width: 60em;
+    display: inline-block;
+    width: 120em;
     height: 100%;
     float: left;
-    margin-left: 24em;
+    margin-left: 16em;
+    margin-right: 16em;
     border: 2px solid;
-    border-radius: 20px;
+    border-color: #000;
+}
+
+.article {
+    position: absolute;
+    border: 2px solid;
+    border-radius: 2em;
     border-color: #000;
     background-color: #CCC;
-    min-height: 24em;
+    height: 36em;
+    width: 52em;
+    top: 50%;
+    margin-left: 32em;
+    margin-top: -19em;
+    padding: 1em;
 }
 
 #bar {
