@@ -11,6 +11,8 @@ function ($, _, Backbone, Handlebars, simple) {
 
     tagName: 'li',
 
+    className: 'entry',
+
     template: Handlebars.compile(simple),
 
     render: function () {
