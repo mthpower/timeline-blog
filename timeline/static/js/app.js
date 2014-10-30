@@ -2,14 +2,14 @@ define(function (require) {
 
     var _           = require('underscore'),
         Backbone    = require('backbone'),
-        mousewheel  = require('mousewheel');
+        mousewheel  = require('mousewheel'),
+        models      = require('models'),
+        views       = require('views'),
 
-        ArticleModel, ArticleCollection
-                    = require('models');
-
-        ArticleView, TimelineView
-                    = require('views');
-
+        ArticleModel = models['ArticleModel'],
+        ArticleCollection = models['ArticleCollection'],
+        ArticleView = views['ArticleView'],
+        TimelineView = views['TimelineView'];
 
     $(document).ready(function() {
         $('timeline').mousewheel(function(e, delta) {

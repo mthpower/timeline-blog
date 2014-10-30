@@ -35,5 +35,8 @@ function ($, _, Backbone, Handlebars) {
     });
 
 
-    return ArticleView, TimelineView;
+    return {
+        'ArticleView': ArticleView,
+        'TimelineView': TimelineView,
+    };
 });

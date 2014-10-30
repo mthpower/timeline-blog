@@ -15,12 +15,6 @@ function ($, _, Backbone) {
             tag : '',
             content : '',
         },
-
-    // To test when we create a model.
-        initialize: function () {
-            alert('new model created')
-        },
-
     });
 
     var ArticleCollection = Backbone.Collection.extend({
@@ -32,5 +26,8 @@ function ($, _, Backbone) {
 
     });
 
-    return ArticleModel, ArticleCollection;
+    return {
+        'ArticleModel': ArticleModel,
+        'ArticleCollection': ArticleCollection,
+    };
 });
