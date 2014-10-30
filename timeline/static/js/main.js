@@ -1,12 +1,17 @@
+"use strict";
 require.config({
     baseUrl : '/static/js',
 
     paths : {
-
-        'underscore'    : '/static/js/underscore.min',
-        'backbone'      : '/static/js/backbone.min',
-        'jquery'        : '/static/js/jquery.min',
-        'mousewheel'    : '/static/js/jquery.mousewheel.min'
+        'underscore'    : 'library/underscore.min',
+        'backbone'      : 'library/backbone.min',
+        'jquery'        : 'library/jquery.min',
+        'mousewheel'    : 'library/jquery.mousewheel.min',
+        'handlebars'    : 'library/handlebars',
+        'text'          : 'library/text',
+        'models'        : 'models',
+        'views'         : 'views',
+        'templates'     : '../templates',
     },
 
     shim : {
