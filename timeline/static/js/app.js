@@ -19,7 +19,11 @@ define(function (require) {
         articles.fetch();
 
     // Create the representation; the view.
-    var timeline = new TimelineView
+    var timeline = new TimelineView({collection: articles});
+
+    timeline.render()
+
+    $('#timeline').append(timeline.el)
 
     // When the page is loaded, bind the horizontal scroll.
     $(document).ready(function() {

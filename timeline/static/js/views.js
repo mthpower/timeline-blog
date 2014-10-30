@@ -8,15 +8,43 @@ define([
 function ($, _, Backbone, Handlebars, simple) {
 
     var ArticleView = Backbone.View.extend({
+
     tagName: 'li',
 
     template: Handlebars.compile(simple),
 
+    initialize: function () {
+        this.listenTo(this.collection, 'add', this.createItem);
+        $.ajaxPrefilter(function(options) {
+                _.extend(options, {format: "json"});
+        });
+    },
+
+    render: function () {
+        var markup = this.template(this.model.attributes);
+
+        this.$el.html(markup);
+
+        return Backbone
+    },
+
     });
 
-
     var TimelineView = Backbone.View.extend({
+
     el: $('#timeline'),
+
+    constructor: function (options) {
+        Backbone.View.apply(this, arguments);
+        this.children = {};
+    },
+
+    initialize: function () {
+        this.listenTo(this.collection, 'add', this.createItem);
+        $.ajaxPrefilter(function(options) {
+                _.extend(options, {format: "json"});
+        });
+    },
 
     createItem: function (article) {
         var view = new ArticleView({
