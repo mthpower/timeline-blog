@@ -8,8 +8,10 @@ require.config({
         'jquery'        : 'jquery.min',
         'mousewheel'    : 'jquery.mousewheel.min',
         'handlebars'    : 'handlebars',
+        'text'          : 'text',
         'models'        : 'models',
         'views'         : 'views',
+        'templates'     : '../templates',
     },
 
     shim : {

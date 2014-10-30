@@ -6,6 +6,9 @@ define(function (require) {
         models      = require('models'),
         views       = require('views'),
 
+        // Templates
+
+        // Unpacking
         ArticleModel = models['ArticleModel'],
         ArticleCollection = models['ArticleCollection'],
         ArticleView = views['ArticleView'],
