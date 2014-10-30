@@ -22,4 +22,6 @@ var ArticleCollection = Backbone.Collection.extend({
 
     url: 'api/v1/article'
 
+    comparator: 'publication_date'
+
 });

@@ -19,6 +19,8 @@ body {
 #timeline {
     width: 8000px;
     height: 80%;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 10%;
     min-height: 40em;
