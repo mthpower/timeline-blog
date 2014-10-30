@@ -6,7 +6,7 @@ define(function (require) {
         mousewheel	= require('mousewheel');
 
     $(document).ready(function() {
-        $('html, body, *').mousewheel(function(e, delta) {
+        $('timeline').mousewheel(function(e, delta) {
             this.scrollLeft -= (delta * 40);
             e.preventDefault();
         });
