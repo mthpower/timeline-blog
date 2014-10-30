@@ -15,5 +15,11 @@ var ArticleModel = Backbone.Model.extend({
         alert('new model created')
     };
 
+});
+
+var ArticleCollection = Backbone.Collection.extend({
+    model: ArticleModel
+
+    url: 'api/v1/article'
 
 });
