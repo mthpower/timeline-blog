@@ -3,11 +3,13 @@ require.config({
     baseUrl : '/static/js',
 
     paths : {
-
-        'underscore'    : '/static/js/underscore.min',
-        'backbone'      : '/static/js/backbone.min',
-        'jquery'        : '/static/js/jquery.min',
-        'mousewheel'    : '/static/js/jquery.mousewheel.min'
+        'underscore'    : 'underscore.min',
+        'backbone'      : 'backbone.min',
+        'jquery'        : 'jquery.min',
+        'mousewheel'    : 'jquery.mousewheel.min',
+        'handlebars'    : 'handlebars',
+        'models'        : 'models',
+        'views'         : 'views',
     },
 
     shim : {
