@@ -13,19 +13,12 @@ function ($, _, Backbone, Handlebars, simple) {
 
     template: Handlebars.compile(simple),
 
-    initialize: function () {
-        this.listenTo(this.collection, 'add', this.createItem);
-        $.ajaxPrefilter(function(options) {
-                _.extend(options, {format: "json"});
-        });
-    },
-
     render: function () {
         var markup = this.template(this.model.attributes);
 
         this.$el.html(markup);
 
-        return Backbone
+        return this;
     },
 
     });
@@ -41,24 +34,17 @@ function ($, _, Backbone, Handlebars, simple) {
 
     initialize: function () {
         this.listenTo(this.collection, 'add', this.createItem);
-        $.ajaxPrefilter(function(options) {
-                _.extend(options, {format: "json"});
-        });
+        // $.ajaxPrefilter(function(options) {
+        //         _.extend(options, {format: "json"});
+        // });
     },
 
     createItem: function (article) {
-        var view = new ArticleView({
-            model: article
-        });
+        var view = new ArticleView({model: article});
 
         this.children[article.cid] = view;
 
-        this.$el.append(view.el);
-    },
-
-    render: function () {
-        this.collection.each(this.createItem, this);
-        return Backbone.View.prototype.render.apply(this, arguments);
+        this.$el.append(view.render().el);
     },
 
     });
