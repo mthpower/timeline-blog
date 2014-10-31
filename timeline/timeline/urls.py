@@ -13,5 +13,6 @@ urlpatterns = patterns(
     '',
     url(r'^$', views.TimelineView.as_view(), name='timeline_view'),
     (r'^api/', include(v1_api.urls)),
+    (r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
