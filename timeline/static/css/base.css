@@ -51,6 +51,23 @@ body {
     padding: 1em;
 }
 
+.simple {}
+
+.simple p {
+    position: absolute;
+    left: 21em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.simple img {
+    position: absolute;
+}
+
+.simple h1 {
+    text-align: center;
+}
+
 #bar {
     height: 2px;
     background: #000;
