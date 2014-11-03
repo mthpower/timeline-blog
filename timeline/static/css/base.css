@@ -53,7 +53,7 @@ body {
 
 .simple {}
 
-.simple p {
+.simple div {
     position: absolute;
     left: 21em;
     margin-left: 1em;
