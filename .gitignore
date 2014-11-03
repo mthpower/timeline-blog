@@ -48,9 +48,9 @@ coverage.xml
 *.log
 
 # Media folder
-media/*.png
-media/*.jpg
-media/*.jpeg
+static/media/*.png
+static/media/*.jpg
+static/media/*.jpeg
 
 # Sphinx documentation
 docs/_build/

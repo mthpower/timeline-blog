@@ -96,9 +96,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Media files (User uploaded files)
+# WARNING: This is (probably) not a sensible configuration for prod.
 
-MEDIA_ROOT = '/timeline/media'
-MEDIA_URL = '/media/'
+MEDIA_ROOT = (os.path.join(BASE_DIR, 'static/media'),)
+MEDIA_URL = '/static/media/'
 
 # Template Directories
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
