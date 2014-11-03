@@ -6,49 +6,81 @@ define([
     'text!templates/simple.html',
 ],
 function ($, _, Backbone, Handlebars, simple) {
+    var View = Backbone.View;
 
-    var ArticleView = Backbone.View.extend({
+    var ArticleView = View.extend({
 
-    tagName: 'li',
+        tagName: 'li',
 
-    className: 'entry',
+        className: 'entry',
 
-    template: Handlebars.compile(simple),
+        template: Handlebars.compile(simple),
 
-    render: function () {
-        var markup = this.template(this.model.attributes);
+        /**
+         * @override
+         */
+        render: function () {
+            var markup = this.template(this.model.attributes);
 
-        this.$el.html(markup);
+            this.$el.html(markup);
 
-        return this;
-    },
+            return View.prototype.render.apply(this, arguments);
+        }
 
     });
 
-    var TimelineView = Backbone.View.extend({
+    var TimelineView = View.extend({
+        displacement: 80,
 
-    el: $('#timeline'),
+        /**
+         * @override
+         */
+        constructor: function (options) {
+            Backbone.View.apply(this, arguments);
+            this.children = {};
+        },
 
-    constructor: function (options) {
-        Backbone.View.apply(this, arguments);
-        this.children = {};
-    },
+        /**
+         * @override
+         */
+        initialize: function () {
+            this.listenTo(this.collection, 'reset', this.createItems);
+            this.$el.scroll(this.onScroll.bind(this));
+        },
 
-    initialize: function () {
-        this.listenTo(this.collection, 'add', this.createItem);
-        // $.ajaxPrefilter(function(options) {
-        //         _.extend(options, {format: "json"});
-        // });
-    },
+        /**
+         * @override
+         */
+        render: function () {
+            var children = Object.keys(this.children).map(function (childName) {
+                return this.children[childName].el;
+            }, this);
+            // will this cause only one reflow?
+            this.$el.append(children);
 
-    createItem: function (article) {
-        var view = new ArticleView({model: article});
+            return View.prototype.render.apply(this, arguments);
+        },
 
-        this.children[article.cid] = view;
+        /**
+         * Fires when user scrolls on the page
+         */
+        onScroll: function(e, delta) {
+            this.$el.scrollLeft(delta >= 0 ? this.displacement : -this.displacement);
+        },
 
-        this.$el.append(view.render().el);
-    },
+        createItems: function () {
+            this.collection.each(this.createItem, this);
+            this.render();
+        },
 
+        createItem: function (article) {
+            var view = new ArticleView({
+                    model: article
+                });
+                view.render();
+
+            this.children[article.cid] = view;
+        }
     });
 
 

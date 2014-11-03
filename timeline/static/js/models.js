@@ -4,10 +4,9 @@ define([
     'backbone',
 ],
 function ($, _, Backbone) {
+    var Collection = Backbone.Collection;
+
     var ArticleModel = Backbone.Model.extend({
-
-        urlRoot: 'api/v1/article',
-
         defaults: {
             author : '',
             created_on : '',
@@ -18,18 +17,27 @@ function ($, _, Backbone) {
         },
     });
 
-    var ArticleCollection = Backbone.Collection.extend({
+    var ArticleCollection = Collection.extend({
         model: ArticleModel,
-
-        meta: {},
 
         url: 'api/v1/article',
 
         comparator: 'publication_date',
 
-        parse: function (response) {
+        /**
+         * @override
+         */
+        constructor: function () {
+            Collection.apply(this, arguments);
+            this.meta = {};
+        },
+
+        /**
+         * @override
+         */
+        parse: function (response, options) {
             this.meta = response.meta;
-            return response.objects;
+            return Collection.prototype.parse.call(this, response.objects, options);
         }
 
     });
