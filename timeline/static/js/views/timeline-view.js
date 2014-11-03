@@ -2,35 +2,13 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'handlebars',
-    'text!templates/simple.html',
+    'views/article-view',
 ],
-function ($, _, Backbone, Handlebars, simple) {
+function ($, _, Backbone, ArticleView) {
     var View = Backbone.View;
 
-    var ArticleView = View.extend({
-
-        tagName: 'li',
-
-        className: 'entry',
-
-        template: Handlebars.compile(simple),
-
-        /**
-         * @override
-         */
-        render: function () {
-            var markup = this.template(this.model.attributes);
-
-            this.$el.html(markup);
-
-            return View.prototype.render.apply(this, arguments);
-        }
-
-    });
-
     var TimelineView = View.extend({
-        displacement: 80,
+        displacement: 160,
 
         /**
          * @override
@@ -65,7 +43,7 @@ function ($, _, Backbone, Handlebars, simple) {
          * Fires when user scrolls on the page
          */
         onScroll: function(e, delta) {
-            this.$el.scrollLeft(delta >= 0 ? this.displacement : -this.displacement);
+            this.$el.scrollLeft(delta * displacement);
         },
 
         createItems: function () {
@@ -84,8 +62,5 @@ function ($, _, Backbone, Handlebars, simple) {
     });
 
 
-    return {
-        'ArticleView': ArticleView,
-        'TimelineView': TimelineView,
-    };
+    return TimelineView;
 });

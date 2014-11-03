@@ -2,20 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'models/article-model'
 ],
-function ($, _, Backbone) {
+function ($, _, Backbone, ArticleModel) {
     var Collection = Backbone.Collection;
-
-    var ArticleModel = Backbone.Model.extend({
-        defaults: {
-            author : '',
-            created_on : '',
-            publication_date : '',
-            title : '',
-            tag : '',
-            content : '',
-        },
-    });
 
     var ArticleCollection = Collection.extend({
         model: ArticleModel,
@@ -39,11 +29,7 @@ function ($, _, Backbone) {
             this.meta = response.meta;
             return Collection.prototype.parse.call(this, response.objects, options);
         }
-
     });
 
-    return {
-        'ArticleModel': ArticleModel,
-        'ArticleCollection': ArticleCollection,
-    };
+    return ArticleCollection;
 });
