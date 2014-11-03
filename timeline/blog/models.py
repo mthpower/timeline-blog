@@ -13,14 +13,25 @@ class Article(models.Model):
     content = models.TextField(blank=False, default='')
 
     # Image fields. Can be left blank.
-    # Template expect a number of images.
-
+    # Templates expect a number of images.
     image_1 = models.ImageField(blank=True, null=True)
     image_2 = models.ImageField(blank=True, null=True)
     image_3 = models.ImageField(blank=True, null=True)
     image_4 = models.ImageField(blank=True, null=True)
     image_5 = models.ImageField(blank=True, null=True)
     image_6 = models.ImageField(blank=True, null=True)
+
+    # Templating choices. Register new templates here.
+    TEMPLATE_CHOICES = (
+        ('SIMPLE', 'Simple'),
+    )
+
+    template = models.CharField(
+        max_length=10,
+        blank=False,
+        choices=TEMPLATE_CHOICES,
+        default='SIMPLE',
+    )
 
     def __unicode__(self):  # pragma: no cover
         return '{} - {}'.format(self.title, self.author)
