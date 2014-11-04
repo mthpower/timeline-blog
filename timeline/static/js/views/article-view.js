@@ -5,8 +5,9 @@ define([
     'handlebars',
     'text',
     'text!templates/simple.hbs',
+    'text!templates/montage.hbs',
 ],
-function ($, _, Backbone, Handlebars, text, simple) {
+function ($, _, Backbone, Handlebars, text, simple, montage) {
     var View = Backbone.View;
 
     var ArticleView = View.extend({
@@ -41,6 +42,7 @@ function ($, _, Backbone, Handlebars, text, simple) {
         getTemplate: function (templateName) {
             var templateLookup = {
                 'simple': simple,
+                'montage': montage,
             };
 
             return templateLookup[templateName]

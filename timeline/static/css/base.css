@@ -23,7 +23,7 @@ body {
     padding: 0;
     position: absolute;
     top: 10%;
-    min-height: 40em;
+    min-height: 60em;
 }
 
 .entry {
@@ -39,19 +39,22 @@ body {
 
 .article {
     position: absolute;
+    top: 50%;
     border: 2px solid;
     border-radius: 2em;
     border-color: #000;
     background-color: #CCC;
-    height: 36em;
-    width: 52em;
-    top: 50%;
-    margin-left: 32em;
-    margin-top: -19em;
     padding: 1em;
 }
 
-.simple {}
+
+/* --  Simple template -- */
+.article.simple {
+    height: 36em;
+    width: 52em;
+    margin-left: 32em;
+    margin-top: -19em;
+}
 
 .simple div {
     position: absolute;
@@ -67,6 +70,51 @@ body {
 .simple h1 {
     text-align: center;
 }
+
+/* --  Montage template -- */
+.article.montage {
+    height: 56em;
+    width: 108em;
+    margin-left: 5em;
+    margin-top: -29em;
+}
+
+.montage img#topleft {
+    position: absolute;
+}
+
+.montage img#topcenter {
+    position: absolute;
+    left: 38em;
+}
+
+.montage img#topright {
+    position: absolute;
+    left: 76em;
+}
+
+.montage img#bottomleft {
+    position: absolute;
+    top: 30em;
+}
+
+.montage img#bottomcenter {
+    position: absolute;
+    left: 38em;
+    top: 30em;
+}
+
+.montage img#bottomright {
+    position: absolute;
+    left: 76em;
+    top: 30em;
+}
+
+.montage h1 {
+    /*position: absolute;*/
+    text-align: center;
+}
+
 
 #bar {
     height: 2px;
