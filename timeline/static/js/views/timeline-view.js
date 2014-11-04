@@ -14,7 +14,7 @@ function ($, _, Backbone, ArticleView) {
          * @override
          */
         constructor: function (options) {
-            Backbone.View.apply(this, arguments);
+            View.apply(this, arguments);
             this.children = {};
         },
 

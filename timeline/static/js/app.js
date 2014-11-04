@@ -13,7 +13,6 @@ define(function (require) {
             reset: true
         });
 
-    // When the page is loaded, bind the horizontal scroll.
     $(function() {
     // Create the representation; the view.
         var timeline = new TimelineView({

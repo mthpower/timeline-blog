@@ -3,9 +3,10 @@ define([
     'underscore',
     'backbone',
     'handlebars',
+    'text',
     'text!templates/simple.hbs',
 ],
-function ($, _, Backbone, Handlebars, simple) {
+function ($, _, Backbone, Handlebars, text, simple) {
     var View = Backbone.View;
 
     var ArticleView = View.extend({
@@ -14,18 +15,36 @@ function ($, _, Backbone, Handlebars, simple) {
 
         className: 'entry',
 
-        template: Handlebars.compile(simple),
+        /**
+         * @override
+         */
+        constructor: function (options) {
+            View.apply(this, arguments);
+            this.templateName = this.model.attributes.template.toLowerCase();
+        },
 
         /**
          * @override
          */
         render: function () {
-            var markup = this.template(this.model.attributes);
+            var hbsTemplate = this.getTemplate(this.templateName),
+
+                template = Handlebars.compile(hbsTemplate),
+
+                markup = template(this.model.attributes);
 
             this.$el.html(markup);
 
             return View.prototype.render.apply(this, arguments);
-        }
+        },
+
+        getTemplate: function (templateName) {
+            var templateLookup = {
+                'simple': simple,
+            };
+
+            return templateLookup[templateName]
+        },
 
     });
 

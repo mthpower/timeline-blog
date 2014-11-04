@@ -9,7 +9,7 @@
             'jquery'        : 'library/jquery',
             'handlebars'    : 'library/handlebars',
             'text'          : 'library/text',
-            'templates'     : '../templates',
+            'templates'     : '../templates'
         },
 
         shim : {
