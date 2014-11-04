@@ -3,9 +3,9 @@ define([
     'underscore',
     'backbone',
     'handlebars',
-    'text!templates/simple.hbs',
+    'templates'
 ],
-function ($, _, Backbone, Handlebars, simple) {
+function ($, _, Backbone, Handlebars, templates) {
     var View = Backbone.View;
 
     var ArticleView = View.extend({
