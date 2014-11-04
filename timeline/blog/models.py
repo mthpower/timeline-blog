@@ -22,8 +22,10 @@ class Article(models.Model):
     image_6 = models.ImageField(blank=True, null=True)
 
     # Templating choices. Register new templates here.
+    # 10 Character limit.
     TEMPLATE_CHOICES = (
         ('SIMPLE', 'Simple'),
+        ('MONTAGE', 'Montage'),
     )
 
     template = models.CharField(
