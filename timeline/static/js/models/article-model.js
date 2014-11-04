@@ -13,6 +13,13 @@ function ($, _, Backbone) {
             title : '',
             tag : '',
             content : '',
+            image1 : '',
+            image2 : '',
+            image3 : '',
+            image4 : '',
+            image5 : '',
+            image6 : '',
+            template: '',
         },
     });
 
