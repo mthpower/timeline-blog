@@ -55,6 +55,46 @@ body {
     padding: 1em;
 }
 
+/* -- Date Navigation -- */
+.nav-container{
+    position: fixed;
+    right: 0px;
+    top: 15px;
+    height: 90px;
+    left: 14%;
+}
+    .f-nav{
+        z-index: 9999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    } /* this make our menu fixed top */
+
+.nav {
+    height: 42px;
+}
+    .nav ul {
+        list-style: none;
+    }
+    .nav ul li{
+        display: inline;
+        margin-top: 10px;
+        padding: 6px;
+        border-right: 1px solid #C0C0C0;
+        font-size:25px;
+    }
+    .nav ul li:first-child{
+        padding-left: 0;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color:#C0C0C0;
+     }
+    .nav ul li a:hover{
+        color:#BCED91;
+    }
+
 
 /* --  Simple template -- */
 .article.simple {
