@@ -33,42 +33,43 @@ body {
     float: left;
     margin-left: 16em;
     margin-right: 16em;
-    border: 2px solid;
-    border-color: #000;
 }
 
 .article {
     position: absolute;
     top: 50%;
-    border: 2px solid;
-    border-radius: 2em;
-    border-color: #000;
-    background-color: #CCC;
     padding: 1em;
 }
 
 
 /* --  Simple template -- */
 .article.simple {
-    height: 36em;
-    width: 52em;
-    margin-left: 32em;
-    margin-top: -19em;
+    height: 50em;
+    margin-left: 10em;
+    margin-top: -26em;
+    width: 90em;
 }
 
 .simple div {
     position: absolute;
-    left: 21em;
+    left: 53em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-top: -1.4em;
 }
 
-.simple img {
+.simple img#top {
     position: absolute;
+    display: inline-block;
 }
 
+.simple img#bottom {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+}
 .simple h1 {
-    text-align: center;
+    text-align: left;
 }
 
 /* --  Montage template -- */
