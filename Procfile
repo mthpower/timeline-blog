@@ -1,1 +1,1 @@
-web: gunicorn timeline.wsgi --log-file -
+web: gunicorn timeline.wsgi --chdir timeline --log-file -
