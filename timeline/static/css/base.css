@@ -26,6 +26,20 @@ body {
     min-height: 60em;
 }
 
+ #clickpoint {
+    width: 20px;
+    height: 20px;
+    background: #BCED91;
+    border: 4px solid white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2px;
+    z-index: -98;
+    top: 48%;
+    position: absolute;
+    left: 77em;
+}
 .entry {
     display: inline-block;
     width: 120em;
@@ -33,42 +47,83 @@ body {
     float: left;
     margin-left: 16em;
     margin-right: 16em;
-    border: 2px solid;
-    border-color: #000;
 }
 
 .article {
     position: absolute;
     top: 50%;
-    border: 2px solid;
-    border-radius: 2em;
-    border-color: #000;
-    background-color: #CCC;
     padding: 1em;
 }
+
+/* -- Date Navigation -- */
+.nav-container{
+    position: fixed;
+    right: 0px;
+    top: 15px;
+    height: 90px;
+    left: 14%;
+}
+    .f-nav{
+        z-index: 9999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    } /* this make our menu fixed top */
+
+.nav {
+    height: 42px;
+}
+    .nav ul {
+        list-style: none;
+    }
+    .nav ul li{
+        display: inline;
+        margin-top: 10px;
+        padding: 6px;
+        border-right: 1px solid #C0C0C0;
+        font-size:25px;
+    }
+    .nav ul li:first-child{
+        padding-left: 0;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color:#C0C0C0;
+     }
+    .nav ul li a:hover{
+        color:#BCED91;
+    }
 
 
 /* --  Simple template -- */
 .article.simple {
-    height: 36em;
-    width: 52em;
-    margin-left: 32em;
-    margin-top: -19em;
+    height: 50em;
+    margin-left: 10em;
+    margin-top: -26em;
+    width: 90em;
 }
 
 .simple div {
     position: absolute;
-    left: 21em;
+    left: 53em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-top: -1.4em;
 }
 
-.simple img {
+.simple img#top {
     position: absolute;
+    display: inline-block;
 }
 
+.simple img#bottom {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+}
 .simple h1 {
-    text-align: center;
+    text-align: left;
 }
 
 /* --  Montage template -- */
