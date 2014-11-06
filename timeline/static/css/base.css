@@ -20,11 +20,11 @@ body {
 
 #timeline {
     width: 8000px;
-    height: 80%;
+    height: 100%;
     margin: 0;
     padding: 0;
     position: absolute;
-    min-height: 900px;
+    /*min-height: 680px;*/
 }
 
  #clickpoint {
@@ -62,6 +62,7 @@ body {
     height: 60px;
     background: #FFFFFF;
     z-index: 9999;
+    opacity: 0.8
 }
 
 .nav {
