@@ -8,6 +8,8 @@
 
     <!-- JavaScript -->
     <script data-main="{% static 'js/main.js' %}" src="{% static 'js/library/require.js' %}"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }} static/js/library/jquery.js"></script>
+
 
     <!--     <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> TODO -->
 
@@ -16,8 +18,6 @@
     <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
   </head>
   <body>
-    {% block nav %}{% endblock nav %}
     {% block timeline %}{% endblock timeline %}
-
   </body>
 </html>

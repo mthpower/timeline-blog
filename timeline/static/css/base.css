@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    min-height: 900px;
+    min-height: 800px;
 }
 
  #clickpoint {
@@ -34,16 +34,32 @@ body {
     border: 4px solid white;
     border-radius: 50px;
     box-shadow: 0 0 0 2px;
-    z-index: -98;
-    top: 48%;
+    top: 50%;
     position: absolute;
-    left: 77em;
+    left: 50%;
 }
+
+div#clickpoint a {
+    position:absolute;
+    width:100%;
+    height:100%; top:0;
+    left:0;
+    text-decoration: none; /* Makes sure the link   doesn't get underlined */
+    z-index:10;
+}
+
+#startpoint {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    top: 38%;
+    left: 53em;
+}
+
 .entry {
     display: inline-block;
-    width: 120em;
+    width: 200em;
     height: 100%;
-    float: left;
     margin-left: 16em;
     margin-right: 16em;
 }
@@ -52,6 +68,14 @@ body {
     position: absolute;
     top: 50%;
     padding: 1em;
+    height: 50em;
+    width: 90em;
+
+
+}
+
+.content {
+    font-size: 15px;
 }
 
 /* -- Date Navigation -- */
@@ -68,6 +92,7 @@ body {
     position: absolute;
     left: 14%;
     height: 42px;
+    top: 8px;
 }
 
 .nav ul {
@@ -79,7 +104,7 @@ body {
     margin-top: 10px;
     padding: 6px;
     border-right: 1px solid #C0C0C0;
-    font-size:25px;
+    font-size:18px;
 }
 
 .nav ul li:first-child {
@@ -98,10 +123,8 @@ body {
 
 /* --  Simple template -- */
 .article.simple {
-    height: 50em;
     margin-left: 10em;
     margin-top: -26em;
-    width: 90em;
 }
 
 .simple div {
@@ -128,10 +151,8 @@ body {
 
 /* --  Montage template -- */
 .article.montage {
-    height: 56em;
-    width: 108em;
     margin-left: 5em;
-    margin-top: -29em;
+    margin-top: -27.3em;
 }
 
 .montage img#topleft {
@@ -148,15 +169,10 @@ body {
     left: 76em;
 }
 
-.montage img#bottomleft {
-    position: absolute;
-    top: 30em;
-}
-
-.montage img#bottomcenter {
+.montage img#bottom {
     position: absolute;
     left: 38em;
-    top: 30em;
+    top: 33.5em;
 }
 
 .montage img#bottomright {
@@ -165,11 +181,11 @@ body {
     top: 30em;
 }
 
-.montage h1 {
-    /*position: absolute;*/
-    text-align: center;
+.montage div#bottomleft {
+    position: absolute;
+    top:32em;
+    width:300px;
 }
-
 
 #bar {
     height: 1px;
@@ -178,4 +194,5 @@ body {
     position: absolute;
     z-index: -99;
     top: 50%;
+    left: 62em;
 }
