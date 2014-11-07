@@ -133,17 +133,19 @@ div#clickpoint a {
     margin-left: 1em;
     margin-right: 1em;
     margin-top: -1.4em;
+    top: 30px;
 }
 
 .simple img#top {
     position: absolute;
     display: inline-block;
+    top: 30px;
 }
 
 .simple img#bottom {
     position: absolute;
     display: inline-block;
-    bottom: 10px;
+    bottom: 30px;
 }
 .simple h1 {
     text-align: left;
@@ -155,36 +157,28 @@ div#clickpoint a {
     margin-top: -27.3em;
 }
 
-.montage img#topleft {
-    position: absolute;
+
+.montage img#top {
+    position: relative;
+    float: left;
+    top: 30px;
+    padding-right:30px;
 }
 
-.montage img#topcenter {
-    position: absolute;
-    left: 38em;
-}
-
-.montage img#topright {
-    position: absolute;
-    left: 76em;
-}
 
 .montage img#bottom {
     position: absolute;
+    display: inline-block;
     left: 38em;
-    top: 33.5em;
+    bottom: 14px;
+    left: 31em;
 }
 
-.montage img#bottomright {
-    position: absolute;
-    left: 76em;
-    top: 30em;
-}
 
 .montage div#bottomleft {
     position: absolute;
-    top:32em;
-    width:300px;
+    top:29em;
+    width:270px;
 }
 
 #bar {
