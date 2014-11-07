@@ -56,6 +56,10 @@ div#clickpoint a {
     left: 53em;
 }
 
+#logo{
+    padding: 14px;
+}
+
 .entry {
     display: inline-block;
     width: 200em;
