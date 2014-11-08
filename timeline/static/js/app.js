@@ -21,6 +21,20 @@ define(function (require) {
             });
             timeline.render();
     });
+    $(document).click(function(event) {
+      var target = $( event.target );
 
+      // Check to see if the target is the div.
+      if (!target.is( ".clickpoint" )) {
+        var time = 1000;
+
+        $(".clickpoint").siblings().each(function() {
+            $(this).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0}, time);
+            time = time + time;
+        });
+        // Prevent default event -- may not need this, try to see
+        return( false );
+      }
+    });
     return {};
 });
