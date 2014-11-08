@@ -101,6 +101,33 @@ body {
     color:#AEAEAE;
 }
 
+/* -- Social Media Buttons -- */
+.social-media-container {
+position: fixed;
+right: 0;
+left: 0;
+height: 60px;
+z-index: 9999;
+bottom: 0;
+
+}
+
+.social-media-buttons {
+    position: absolute;
+    right: 14%;
+    height: 42px;
+    bottom: 8px;
+}
+
+.social-media-buttons ul {
+    list-style: none;
+}
+
+.social-media-buttons ul li {
+    display: inline;
+    margin-top: 10px;
+    padding: 6px;
+}
 
 /* --  Simple template -- */
 .article.simple {
@@ -185,3 +212,4 @@ body {
     z-index: -99;
     top: 50%;
 }
+
