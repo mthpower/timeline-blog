@@ -66,37 +66,40 @@ body {
     z-index: 99;
 }
 
-.nav {
-    position: absolute;
-    left: 14%;
-    top: 6px;
-    height: 42px;
+nav#date-navigation {
+    width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
-.nav ul {
+nav#date-navigation ul {
     list-style: none;
     font-size: 112.5%;
 }
 
-.nav ul li {
-    display: inline;
+nav#date-navigation ul li {
+    display: inline-block;
     margin-top: 10px;
     padding: 6px;
     border-left: 1px solid #E1E1E1;
     font-size:25px;
 }
 
-.nav ul li:first-child {
+nav#date-navigation ul li:first-child {
     padding-left: 0;
     border-left: 0;
 }
 
-.nav ul li a {
+nav#date-navigation ul li a {
     text-decoration: none;
     color: #E1E1E1;
  }
 
-.nav ul li a:hover {
+nav#date-navigation ul li a:hover {
     color: #AEAEAE;
 }
 
@@ -111,7 +114,7 @@ body {
 }
 
 .social {
-    width: 415px;
+    width: 425px;
     display: block;
     margin-left: auto;
     margin-right: auto;
