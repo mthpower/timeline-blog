@@ -16,12 +16,23 @@ function ($, _, Backbone, Handlebars, text, simple, montage) {
 
         className: 'entry',
 
+        events: {
+            'click .clickpoint' : 'onClickpoint',
+        },
+
+        onClickpoint: function () {
+            var time = 1000,
+                contentElms = this.$el.find("img, h1, p");
+            contentElms.fadeToggle(time)
+        },
+
         /**
          * @override
          */
         constructor: function (options) {
             View.apply(this, arguments);
             this.templateName = this.model.attributes.template.toLowerCase();
+            // this.active = false;
         },
 
         /**
