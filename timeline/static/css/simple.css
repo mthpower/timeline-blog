@@ -1,0 +1,29 @@
+/* --  Simple template -- */
+.article.simple {
+    height: 50em;
+    margin-left: 10em;
+    margin-top: -26em;
+    width: 90em;
+}
+
+.simple div {
+    position: absolute;
+    left: 53em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: -1.4em;
+}
+
+.simple img#top {
+    position: absolute;
+    display: inline-block;
+}
+
+.simple img#bottom {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+}
+.simple h1 {
+    text-align: left;
+}
