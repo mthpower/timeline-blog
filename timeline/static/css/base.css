@@ -51,12 +51,20 @@ body {
     opacity: 0.8;
 }
 
+.article.start {
+    height: 40em;
+    width: 10em;
+    margin-left: 56em;
+    margin-top: -20em;
+    opacity: 1;
+}
+
 #bar {
     height: 1px;
     background: #000;
-    width: 100%;
+    width: 7500px;
     position: absolute;
     z-index: -99;
     top: 50%;
+    left: 90em;
 }
-
