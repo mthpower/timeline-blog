@@ -63,7 +63,6 @@ body {
     right: 0;
     left: 0;
     height: 60px;
-    background: #FFFFFF;
     z-index: 99;
 }
 
@@ -94,11 +93,40 @@ body {
 
 .nav ul li a {
     text-decoration: none;
-    color:#E1E1E1;
+    color: #E1E1E1;
  }
 
 .nav ul li a:hover {
-    color:#AEAEAE;
+    color: #AEAEAE;
+}
+
+/* -- Social Media Buttons -- */
+.social-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 95px;
+    z-index: 99;
+    bottom: 0;
+}
+
+.social {
+    width: 415px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.social ul {
+    list-style: none
+}
+
+.social li {
+    display: inline-block;
+    padding: 4px;
 }
 
 
@@ -185,3 +213,4 @@ body {
     z-index: -99;
     top: 50%;
 }
+
