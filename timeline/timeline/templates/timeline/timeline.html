@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block timeline %}
 
+{% include 'timeline/nav.html' %}
+
 <ul id="timeline">
     <div id="bar"></div>
     <div id="clickpoint"><div>
-
 </ul>
 
+{% include 'timeline/social.html' %}
 
 {% endblock timeline %}
