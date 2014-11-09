@@ -1,0 +1,43 @@
+/* --  Montage template -- */
+.article.montage {
+    height: 56em;
+    width: 108em;
+    margin-left: 5em;
+    margin-top: -29em;
+}
+
+.montage img#topleft {
+    position: absolute;
+}
+
+.montage img#topcenter {
+    position: absolute;
+    left: 38em;
+}
+
+.montage img#topright {
+    position: absolute;
+    left: 76em;
+}
+
+.montage img#bottomleft {
+    position: absolute;
+    top: 30em;
+}
+
+.montage img#bottomcenter {
+    position: absolute;
+    left: 38em;
+    top: 30em;
+}
+
+.montage img#bottomright {
+    position: absolute;
+    left: 76em;
+    top: 30em;
+}
+
+.montage h1 {
+    /*position: absolute;*/
+    text-align: center;
+}
