@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block timeline %}
 
 {% include 'timeline/nav.html' %}
 
 <ul id="timeline">
     <div id="bar"></div>
+    <li class="entry">
+        <div class="article start">
+            <img src="{% static 'img/day-in-the-life-logo.png' %}">
+        </div>
+    </li>
 </ul>
 
 {% include 'timeline/social.html' %}
