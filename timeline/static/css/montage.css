@@ -1,43 +1,25 @@
 /* --  Montage template -- */
 .article.montage {
-    height: 56em;
+    height: 50em;
     width: 108em;
     margin-left: 5em;
-    margin-top: -29em;
+    margin-top: -26em;
 }
 
-.montage img#topleft {
-    position: absolute;
+.montage img#top {
+    position: relative;
+    float: left;
+    padding-right:30px;
 }
-
-.montage img#topcenter {
+.montage img#bottom {
     position: absolute;
+    display: inline-block;
     left: 38em;
+    bottom: 14px;
+    left: 31em;
 }
-
-.montage img#topright {
+.montage div#bottomleft {
     position: absolute;
-    left: 76em;
-}
-
-.montage img#bottomleft {
-    position: absolute;
-    top: 30em;
-}
-
-.montage img#bottomcenter {
-    position: absolute;
-    left: 38em;
-    top: 30em;
-}
-
-.montage img#bottomright {
-    position: absolute;
-    left: 76em;
-    top: 30em;
-}
-
-.montage h1 {
-    /*position: absolute;*/
-    text-align: center;
+    top:29em;
+    width:270px;
 }

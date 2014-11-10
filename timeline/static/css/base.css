@@ -39,8 +39,7 @@ body {
     width: 120em;
     height: 100%;
     float: left;
-    margin-left: 16em;
-    margin-right: 16em;
+    padding-right:100em;
 }
 
 .article {
@@ -55,6 +54,10 @@ body {
     margin-left: 56em;
     margin-top: -20em;
     opacity: 1;
+}
+
+.content {
+    font-size: 150%;
 }
 
 #bar {
