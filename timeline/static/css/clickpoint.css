@@ -2,7 +2,7 @@
 .clickpoint {
     width: 20px;
     height: 20px;
-    background: #BCED91;
+    background: #9FEFBF;
     border: 4px solid white;
     border-radius: 50px;
     box-shadow: 0 0 0 2px;
@@ -21,4 +21,8 @@
     top:0;
     left: 0;
     text-decoration: none;
+}
+
+.clickpoint.active {
+    background: #FF0000;
 }
