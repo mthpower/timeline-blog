@@ -39,8 +39,7 @@ body {
     width: 120em;
     height: 100%;
     float: left;
-    margin-left: 16em;
-    margin-right: 16em;
+    padding-right:110em;
 }
 
 .article {
@@ -51,14 +50,14 @@ body {
 
 .article.start {
     height: 40em;
-    width: 10em;
-    margin-left: 56em;
+    width: 40em;
+    margin-left: 75em;
     margin-top: -20em;
     opacity: 1;
 }
 
 .content {
-    font-size: 100%;
+    font-size: 150%;
 }
 
 #bar {
