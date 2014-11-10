@@ -22,8 +22,10 @@ function ($, _, Backbone, Handlebars, text, simple, montage) {
 
         onClickpoint: function () {
             var time = 1000,
-                contentElms = this.$el.find("img, h1, p");
-            contentElms.fadeToggle(time)
+                el = this.$el;
+
+            el.find("img, h1, p").fadeToggle(time);
+            el.find('.clickpoint').toggleClass('active');
         },
 
         /**
@@ -46,6 +48,8 @@ function ($, _, Backbone, Handlebars, text, simple, montage) {
                 markup = template(this.model.attributes);
 
             this.$el.html(markup);
+
+            this.$el.find("img, h1, p").hide();
 
             return View.prototype.render.apply(this, arguments);
         },
