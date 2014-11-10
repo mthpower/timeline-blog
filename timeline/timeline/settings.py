@@ -98,8 +98,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # Media files (User uploaded files)
 # WARNING: This is (probably) not a sensible configuration for prod.
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
-MEDIA_URL = '/static/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Template Directories
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
