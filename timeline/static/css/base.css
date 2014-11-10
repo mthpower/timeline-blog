@@ -43,15 +43,16 @@ body {
 }
 
 .article {
-    position: absolute;
+    position: relative;
     top: 50%;
     padding: 1em;
+    margin-top: -26em;
+    margin: 0 auto;
 }
 
 .article.start {
     height: 40em;
     width: 40em;
-    margin-left: 75em;
     margin-top: -20em;
     opacity: 1;
 }
@@ -67,5 +68,4 @@ body {
     position: absolute;
     z-index: -99;
     top: 50%;
-    left: 90em;
 }

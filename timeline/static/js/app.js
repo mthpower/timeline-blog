@@ -22,5 +22,15 @@ define(function (require) {
             timeline.render();
     });
 
+    $(document).ready(function() {
+        if (window.screen.width >= 670) {
+            var screenWidth = window.screen.width
+        } else {
+            var screenWidth = 670
+        }
+        $('.entry').css('width', screenWidth)
+        $('#bar').css('left', (screenWidth / 2))
+    });
+
     return {};
 });
