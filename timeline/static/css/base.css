@@ -57,6 +57,10 @@ body {
     opacity: 1;
 }
 
+.content {
+    font-size: 100%;
+}
+
 #bar {
     height: 1px;
     background: #000;
