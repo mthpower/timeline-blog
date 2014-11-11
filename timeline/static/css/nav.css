@@ -8,7 +8,7 @@
 }
 
 nav#date-navigation {
-    width: 1200px;
+    width: 1060px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +27,7 @@ nav#date-navigation ul li {
     margin-top: 10px;
     padding: 6px;
     border-left: 1px solid #E1E1E1;
-    font-size:25px;
+    font-size:20px;
 }
 
 nav#date-navigation ul li:first-child {
