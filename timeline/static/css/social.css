@@ -3,13 +3,13 @@
     position: fixed;
     right: 0;
     left: 0;
-    height: 95px;
+    height: 50px;
     z-index: 99;
     bottom: 0;
 }
 
 .social {
-    width: 425px;
+    width: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
