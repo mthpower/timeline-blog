@@ -30,7 +30,7 @@ h1, {
 }
 
 #timeline {
-    width: 12000px;
+    width: 36000px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -85,7 +85,7 @@ h1, {
 #bar {
     height: 1px;
     background: #000;
-    width: 11500px;
+    width: 35500px;
     position: absolute;
     z-index: -99;
     top: 50%;
