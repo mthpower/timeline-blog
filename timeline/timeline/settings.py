@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -91,15 +90,15 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Media files (User uploaded files)
 # WARNING: This is (probably) not a sensible configuration for prod.
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
-MEDIA_URL = '/static/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Template Directories
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
