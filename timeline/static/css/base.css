@@ -24,7 +24,7 @@ body {
     overflow-y: auto;
 }
 
-h1 {
+h1, {
      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
      font-weight: 600;
 }
@@ -38,6 +38,23 @@ h1 {
     min-height: 680px;
 }
 
+#scrolltext {
+    position: fixed;
+    bottom: 20px;
+    width: 500px;
+    z-index: 99;
+    height: 50px;
+    right: 5%;
+    opacity: 0;
+    visibility:hidden;
+}
+
+#scrolltext h2 {
+    color: #E1E1E1;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
 
 .entry {
     display: inline-block;

@@ -22,5 +22,10 @@ define(function (require) {
             timeline.render();
     });
 
+    $(document).ready(function() {
+      $('#scrolltext')
+        .css('visibility', 'visible').animate({opacity: 1.0}, 2500);
+    });
+
     return {};
 });
